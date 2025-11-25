@@ -14,7 +14,7 @@ if (!admin.apps.length) {
     throw new Error("Missing Firebase admin env vars");
   }
 
-  // Vercel env me private key "\n" ke saath aati hai, usko real newline banao
+  // Vercel env me \n literal aata hai, usko real newline bana do
   privateKey = privateKey.replace(/\\n/g, "\n");
 
   app = admin.initializeApp({
